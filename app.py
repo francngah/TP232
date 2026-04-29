@@ -321,7 +321,7 @@ elif "graphique" in menu:
         tab1, tab2, tab3 = st.tabs(["📊 Distributions", "🔗 Corrélations", "🌡️ Matrice thermique"])
         
         with tab1:
-            st.markdown("#### Étude de la dispersion des variables")
+            st.markdown("#### Étude de la distribution des variables")
             var = st.selectbox("Choisir la mesure à analyser", ["Rendement (t/ha)", "Surface (ha)", "pH Sol", "Pluviométrie (mm)"], key="v1")
             fig = px.histogram(df, x=var, nbins=30, marginal="box", color_discrete_sequence=[PALETTE[2]], opacity=0.8)
             fig.update_layout(CHART_THEME)
